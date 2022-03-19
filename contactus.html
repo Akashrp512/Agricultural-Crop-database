@@ -2357,13 +2357,16 @@ footer a:hover {
                 Email.send({
                 Host : "smtp.gmail.com",
                 Username : "ezyfarming123@gmail.com",
-                Password : "google5@6",
+                Password : "Mypassword",
                 To : 'ezyfarming123@gmail.com',
                 From : document.getElementById("email").value,
                 Subject : "New contact form Enquery",
-                Body : "And this is the body"
+                Body : "First Name: "+document.getElementById("first-name").value
+                       +"<br> Last Name:"+document.getElementById("last-name").value
+                       +"<br> Email:"+document.getElementById("email").value
+                       +"<br> Message:"+document.getElementById("message").value
                 }).then(
-                message => alert(message)
+                message => alert("Message Sent Succesfully")
                 );
             }
         </script>
